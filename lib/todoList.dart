@@ -50,8 +50,13 @@ class _TodoListState extends State<TodoList> {
               onPressed: () {
                 setState(() {
                   final todo = new Todo(title: controller.value.text);
+                  if(controller.value.text == ""){
+                    print(" ");
+                  }else{
                   todos.add(todo);
-                  controller.clear();
+                 
+                  }
+                   controller.clear();
                   Navigator.of(context).pop();
                 });
               },
